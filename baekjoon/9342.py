@@ -10,4 +10,4 @@
 '''
 import re
 for _ in range(int(input())):
-    print('Infected!' if re.match('^([ABCDEF]?)A+F+C+([ABCDEF]?)$',input()) else 'Good')
+    print('Infected!' if re.match('^([A-F]?)A+F+C+([A-F]?)$',input()) else 'Good')

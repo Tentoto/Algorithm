@@ -8,6 +8,7 @@ bib=list(filter(None,p.split('\n')))
 
 order=[name.group(1) for name in re.finditer(re.compile('cite\{([a-z]{1,100})\}'),lines)]
 bib_order=[name.group(1) for name in re.finditer(re.compile('bitem\{([a-z]{1,100})\}'),lines)]
+
 if order==bib_order:
     print('Correct')
 else:
