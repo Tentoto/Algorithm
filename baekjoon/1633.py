@@ -6,11 +6,9 @@ import sys
 players=[]
 answer=0
 for idx,line in enumerate(sys.stdin.readlines()):
-    try:
-        white,black=map(int,line.split())
-        players.append((white,black))
-    except:
-        pass
+    white,black=map(int,line.split())
+    players.append((white,black))
+
 dp=[[[0 for _ in range(16)] for _ in range(16)] for i in range(len(players)+1)]
 for n in range(1,len(players)+1):
     for w in range(min(n+1,16)):
@@ -26,4 +24,5 @@ for n in range(1,len(players)+1):
                 dp[n][w][b]=max(max([dp[n-i][w-1][b] for i in range(1,n+1)])+players[n-1][0],dp[n-1][w][b])
             else:
                 dp[n][w][b]=max(max([dp[n-i][w-1][b] for i in range(1,n+1)])+players[n-1][0],max([dp[n-i][w][b-1] for i in range(1,n+1)])+players[n-1][1],dp[n-1][w][b])
+
 print(max([dp[i][15][15] for i in range(len(players)+1)]))
