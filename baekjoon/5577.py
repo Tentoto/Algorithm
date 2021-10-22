@@ -9,6 +9,7 @@ input=sys.stdin.readline
 stack=[]
 size=int(input())
 answer=10000
+
 def simulation(i):
     if len(set([stack[i+j] for j in [-1,0,1] if i+j in range(len(stack))]))==1:
         return len(stack)

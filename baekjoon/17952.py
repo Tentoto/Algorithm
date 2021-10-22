@@ -3,7 +3,6 @@
 문제 내용 : 주어진 시간동안 최근에 주어지는 과제를 우선적으로 처리할 때 얻게 되는 점수를 반환하는 문제
 '''
 import sys
-from collections import deque
 
 input=sys.stdin.readline
 
