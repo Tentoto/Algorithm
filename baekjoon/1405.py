@@ -7,14 +7,13 @@ probs={'U':u/100,'D':d/100,'L':l/100,'R':r/100}
 visited={(0,0):0}
 answer=0
 
-def dfs(pos_x,pos_y,prob,depth,max_depth,simple,visited):
+def dfs(pos_x,pos_y,prob,depth,max_depth,visited):
     global answer
     depth+=1
     nvisited=visited.copy()
     nvisited[(pos_x,pos_y)]=depth
     if depth == max_depth:
-        if simple:
-            answer+=prob
+        answer+=prob
         return
     else:
         for direction in ['U','D','L','R']:
@@ -33,7 +32,7 @@ def dfs(pos_x,pos_y,prob,depth,max_depth,simple,visited):
             if (new_pos_x,new_pos_y) in visited:
                 pass
             else:
-                dfs(new_pos_x,new_pos_y,prob*probs[direction],depth,max_depth,simple,nvisited)
+                dfs(new_pos_x,new_pos_y,prob*probs[direction],depth,max_depth,nvisited)
 
 dfs(0,0,1,-1,n,True,visited)
 print(answer)
