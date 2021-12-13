@@ -10,7 +10,6 @@ pos=0
 
 while abs(pos-(right+left)/2)>1e-9:
     pos=(right+left)/2
-    answer=0
     if (l//pos)*(w//pos)*(h//pos)>=n:
         left=pos
     else:

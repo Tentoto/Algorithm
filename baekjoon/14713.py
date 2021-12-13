@@ -25,9 +25,12 @@ def solution():
         except:
             print('Impossible')
             return
+
     if sent_dict:
         print('Impossible')
     else:
         print('Possible')
+        
+    return
 
 solution()

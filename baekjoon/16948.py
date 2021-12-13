@@ -3,6 +3,7 @@
 문제 내용 : 주어진 크기의 체스판 위에서 시작 좌표와 끝 좌표가 주어질 때 나이트가 끝 좌표에 도달하는 최소 이동 횟수를 반환
 '''
 from collections import deque
+
 n=int(input())
 ri,ci,rf,cf=map(int,input().split())
 chess=[[0 for _ in range(n)] for _ in range(n)]
