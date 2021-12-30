@@ -41,6 +41,20 @@ while users:
 
 print(computers)
 print(*counts)
+
+'''
+input
+5
+20 50
+10 100
+30 120
+60 110
+80 90
+
+output
+4
+1 2 1 1
+'''
     
         
 

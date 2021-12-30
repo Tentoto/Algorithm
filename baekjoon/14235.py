@@ -14,3 +14,19 @@ for _ in range(int(input())):
     else:
         for i in visit[1:]:
             heapq.heappush(gifts,-i)
+
+'''
+input
+5
+0
+3 3 3 2
+0
+0
+0
+
+output
+-1
+3
+2
+-1
+'''
